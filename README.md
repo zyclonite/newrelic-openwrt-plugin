@@ -1,6 +1,6 @@
 NewRelic OpenWrt Plugin
 =======================
-monitor you openwrt installtion with a simple shell script
+monitor your openwrt installtion with a simple shell script
 
 
 ## Installation
