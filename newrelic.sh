@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/ash
 licensekey="insert your license key"
 host="insert your hostname"
 version="1.0.0"
