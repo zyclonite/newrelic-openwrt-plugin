@@ -33,7 +33,7 @@ SendMetrics () {
 }
 
 GetCpuStats () {
-    for c in 1 2
+    for c in 1 2 3
     do
       read -r CPU </proc/stat
       CPU=$( echo $CPU | cut -d " " -f2- )
@@ -54,7 +54,7 @@ GetCpuStats () {
       done
       PREV_STAT="$CPU"
       PREV_TOTAL="$TOTAL"
-      if [ $c -lt 2 ]
+      if [ $c -lt 3 ]
       then
         sleep 1
       fi
