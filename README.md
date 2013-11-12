@@ -22,6 +22,7 @@ Running the Agent
      - Router hostname
      - Router name*
      - Your New Relic license key
+     
      *Name is the value that will be displayed in the New Relic UI.
 
           #!/bin/ash
