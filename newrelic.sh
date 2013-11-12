@@ -1,6 +1,7 @@
 #!/bin/ash
 licensekey="insert your license key"
-host="insert your hostname"
+host="insert router hostname"
+name="insert router name"
 version="1.0.1"
 
 SendMetrics () {
@@ -15,7 +16,7 @@ SendMetrics () {
       },
       "components": [
         {
-          "name": "'$host'",
+          "name": "'$name'",
           "guid": "net.zyclonite.newrelic.openwrt",
           "duration" : 60,
           "metrics" : {
