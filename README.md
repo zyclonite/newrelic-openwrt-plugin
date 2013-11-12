@@ -24,10 +24,10 @@ Running the Agent
      - Your New Relic license key
      *Name is the value that will be displayed in the New Relic UI.
 
-        #!/bin/ash
-        licensekey="insert your license key"
-        host="insert router hostname"
-        name="insert router name"
+          #!/bin/ash
+          licensekey="insert your license key"
+          host="insert router hostname"
+          name="insert router name"
 
 3. Make the file executable: `chmod +x ./newrelic.sh`
 4. Create a cron job that executes the script every minute: `*/1 * * * * /<directory>/newrelic.sh`
