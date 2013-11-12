@@ -17,8 +17,8 @@ Prerequisites
 Running the Agent
 ----------------------------------
 
- 1. Copy the newrelic.sh file to a directory of your choice
- 2. At the top of the newrelic.sh script, fill in:
+1. Copy the newrelic.sh file to a directory of your choice
+2. At the top of the newrelic.sh script, fill in:
      - Router hostname
      - Router name*
      - Your New Relic license key
