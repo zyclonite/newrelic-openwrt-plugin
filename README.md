@@ -1,31 +1,38 @@
 NewRelic OpenWrt Plugin
 =======================
-monitor your openwrt installtion with a simple shell script
+Monitor your OpenWrt installation with a simple shell script
 
+Prerequisites
+-------------
 
-## Installation
+  - A New Relic account. Signup for a free account at http://newrelic.com
+  - A server running Memcached v1.4 or greater. Download the latest version of Memcached for free here.
+  - cURL package
 
-requirements: curl package
+    To install cURL:
 
-    ipkg update
-    ipkg install curl
+        ipkg update
+        ipkg install curl
 
-copy the newrelic.sh file to a directory of your choice
-fill in your hostname and license key at the top of the newrelic.sh script
+Running the Agent
+----------------------------------
 
-    #!/bin/ash
-    licensekey="insert your license key"
-    host="insert your hostname"
+ 1. Copy the newrelic.sh file to a directory of your choice
+ 2. At the top of the newrelic.sh script, fill in:
+     - Router hostname
+     - Router name*
+     - Your New Relic license key
+     *Name is the value that will be displayed in the New Relic UI.
 
-make the file executable
+        #!/bin/ash
+        licensekey="insert your license key"
+        host="insert router hostname"
+        name="insert router name"
 
-    $ chmod +x ./newrelic.sh
+3. Make the file executable: `chmod +x ./newrelic.sh`
+4. Create a cron job that executes the script every minute: `*/1 * * * * /<directory>/newrelic.sh`
 
-create a cron job that executes the script every minute
-
-    */1 * * * * /<directory>/newrelic.sh
-
-after some minutes you should see a new menu called OpenWrt in your NewRelic web-console
+After a few minutes, you should see a new menu called OpenWrt in your NewRelic web-console
 
 ## Source
 
